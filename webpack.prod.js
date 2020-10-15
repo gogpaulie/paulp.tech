@@ -46,16 +46,4 @@ module.exports = merge(common, {
       },
     ],
   },
-  module: {
-    rules: [
-      {
-        test: /\.(png|pdf|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
-      },
-    ],
-  },
 });
