@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPDFPlugin = require('html-webpack-pdf-plugin');
 const common = require('./webpack.common');
 const merge = require('webpack-merge');
 const path = require('path');
@@ -18,23 +17,9 @@ module.exports = merge(common, {
     minimizer: [
       new OptimizeCssAssetsPlugin(),
       new TerserPlugin(),
-      new HtmlWebpackPDFPlugin({
-        template: 'src/index.html',
-        inject: 'body',
-        writePDF: {
-          format: 'Letter',
-          margin: {
-            top: '1in',
-            left: '1in',
-            right: '1in',
-            bottom: '1in',
-          },
-        },
-      }),
       new HtmlWebpackPlugin({
         template: './src/template.html',
         favicon: './src/assets/favicon.png',
-        resume: './src/assets/resume.pdf',
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
