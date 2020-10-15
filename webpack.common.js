@@ -1,5 +1,4 @@
 const Webpack = require('webpack');
-const resume = require('./src/assets/resume.pdf');
 module.exports = {
   entry: {
     vendor: './src/vendor.js',
