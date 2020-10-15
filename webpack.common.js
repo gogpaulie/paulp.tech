@@ -12,8 +12,16 @@ module.exports = {
       },
       {
         test: /\.(pdf|jpg|jpeg|png|gif|svg)$/,
-        use: 'file-loader?name=[path][name].[ext]',
-        include: paths,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[hash].[ext]',
+              outputPath: 'assets',
+              esModule: false,
+            },
+          },
+        ],
       },
     ],
   },
