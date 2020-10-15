@@ -44,17 +44,6 @@ module.exports = merge(common, {
           'sass-loader',
         ], //1. Turns sass into css
       },
-      {
-        test: /\.(png|svg|jpg|gif|pdf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-            },
-          },
-        ],
-      },
     ],
   },
 });
