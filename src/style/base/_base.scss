@@ -21,4 +21,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   padding: 30px;
+
+  @include respond(phone) {
+    padding: 10px;
+  }
 }
