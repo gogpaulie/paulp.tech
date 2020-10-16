@@ -21,9 +21,20 @@
   bottom: 0;
   right: 0;
   z-index: -1;
+  position: relative;
 
   @include respond(phone) {
     padding: 0rem $default-font-size;
+  }
+
+  .logo-container {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+
+  .hero-logo {
+    height: 150px;
   }
 
   .hero-title {
